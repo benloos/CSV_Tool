@@ -18,7 +18,7 @@ Public Class FileHandler
         Using sfd As New SaveFileDialog() With {.Filter = filter}
             If sfd.ShowDialog() = DialogResult.OK Then
                 File.WriteAllLines(sfd.FileName, content)
-                Return "Success"
+                Return sfd.FileName
             Else
                 Return ""
             End If

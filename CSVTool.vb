@@ -1,7 +1,4 @@
-﻿Imports System.Reflection.Metadata
-Imports CSV_Tool.FileHandler, CSV_Tool.Logger
-
-Public Class CSVTool
+﻿Public Class CSVTool
     ''' <summary>
     ''' Struktur:
     '''     GUI:
@@ -40,7 +37,7 @@ Public Class CSVTool
             Next
             log.Log("Info", "CSV Datei erfolgreich geladen")
         Else
-            log.Log("Error", "Fehler beim auslesen der Datei")
+            log.Log("Error", "Fehler beim Laden der Datei")
         End If
 
 
@@ -81,9 +78,14 @@ Public Class CSVTool
             For i As Integer = 0 To originalFile.Count - 1
                 newFile.Add(String.Join(",", originalFile(i)))
             Next
-            fh.saveFile(newFile)
-            MsgBox("Erfolgreich geändert")
-            log.Log("Success", "Spalte " & lbColumns.SelectedItem & " wurde überschrieben")
+            Dim fileName As String = fh.saveFile(newFile)
+            If fileName IsNot "" Then
+                MsgBox(fileName & " wurde erfolgreich gespeichert")
+                log.Log("Success", "Spalte " & lbColumns.SelectedItem & " wurde in der Datei " & fileName & " überschrieben")
+            Else
+                MsgBox("Fehler beim speichern")
+                log.Log("Error", "Datei konnte nicht gespeichert werden")
+            End If
         End If
     End Sub
 

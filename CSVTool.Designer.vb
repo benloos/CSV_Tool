@@ -27,6 +27,8 @@ Partial Class CSVTool
         dgvCSV = New DataGridView()
         btnReplaceData = New Button()
         btnOpenLogs = New Button()
+        lbMessages = New Label()
+        lblColumns = New Label()
         CType(dgvCSV, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -34,7 +36,7 @@ Partial Class CSVTool
         ' 
         btnImportCSV.Location = New Point(12, 12)
         btnImportCSV.Name = "btnImportCSV"
-        btnImportCSV.Size = New Size(90, 23)
+        btnImportCSV.Size = New Size(155, 35)
         btnImportCSV.TabIndex = 0
         btnImportCSV.Text = "Import CSV"
         btnImportCSV.UseVisualStyleBackColor = True
@@ -43,51 +45,75 @@ Partial Class CSVTool
         ' 
         lbColumns.FormattingEnabled = True
         lbColumns.ItemHeight = 15
-        lbColumns.Location = New Point(633, 41)
+        lbColumns.Location = New Point(12, 90)
         lbColumns.Name = "lbColumns"
         lbColumns.Size = New Size(155, 109)
         lbColumns.TabIndex = 2
         ' 
         ' dgvCSV
         ' 
+        dgvCSV.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         dgvCSV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvCSV.Location = New Point(12, 41)
+        dgvCSV.Location = New Point(173, 12)
         dgvCSV.Name = "dgvCSV"
-        dgvCSV.Size = New Size(615, 397)
+        dgvCSV.Size = New Size(399, 287)
         dgvCSV.TabIndex = 3
         ' 
         ' btnReplaceData
         ' 
-        btnReplaceData.Location = New Point(633, 156)
+        btnReplaceData.Location = New Point(12, 205)
         btnReplaceData.Name = "btnReplaceData"
-        btnReplaceData.Size = New Size(90, 23)
+        btnReplaceData.Size = New Size(155, 35)
         btnReplaceData.TabIndex = 4
         btnReplaceData.Text = "Replace Data"
         btnReplaceData.UseVisualStyleBackColor = True
         ' 
         ' btnOpenLogs
         ' 
-        btnOpenLogs.Location = New Point(633, 415)
+        btnOpenLogs.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        btnOpenLogs.Location = New Point(12, 264)
         btnOpenLogs.Name = "btnOpenLogs"
-        btnOpenLogs.Size = New Size(90, 23)
+        btnOpenLogs.Size = New Size(155, 35)
         btnOpenLogs.TabIndex = 5
         btnOpenLogs.Text = "Open Logs"
         btnOpenLogs.UseVisualStyleBackColor = True
+        ' 
+        ' lbMessages
+        ' 
+        lbMessages.AutoSize = True
+        lbMessages.Location = New Point(633, 16)
+        lbMessages.Name = "lbMessages"
+        lbMessages.Size = New Size(0, 15)
+        lbMessages.TabIndex = 6
+        lbMessages.TextAlign = ContentAlignment.MiddleRight
+        ' 
+        ' lblColumns
+        ' 
+        lblColumns.AutoSize = True
+        lblColumns.Location = New Point(12, 72)
+        lblColumns.Name = "lblColumns"
+        lblColumns.Size = New Size(113, 15)
+        lblColumns.TabIndex = 7
+        lblColumns.Text = "Columns (choose 1)"
         ' 
         ' CSVTool
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 450)
+        ClientSize = New Size(584, 311)
+        Controls.Add(lblColumns)
+        Controls.Add(lbMessages)
         Controls.Add(btnOpenLogs)
         Controls.Add(btnReplaceData)
         Controls.Add(dgvCSV)
         Controls.Add(lbColumns)
         Controls.Add(btnImportCSV)
+        MinimumSize = New Size(600, 350)
         Name = "CSVTool"
         Text = "CSV Tool"
         CType(dgvCSV, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents btnImportCSV As Button
@@ -95,5 +121,7 @@ Partial Class CSVTool
     Friend WithEvents dgvCSV As DataGridView
     Friend WithEvents btnReplaceData As Button
     Friend WithEvents btnOpenLogs As Button
+    Friend WithEvents lbMessages As Label
+    Friend WithEvents lblColumns As Label
 
 End Class
