@@ -53,7 +53,7 @@ Public Class CSVTool
         If lbColumns.Items.Count = 0 Then
             MsgBox("Bitte lade eine CSV Datei")
         ElseIf lbColumns.SelectedItems.Count = 0 Then
-            MsgBox("Bitte wähle eine oder mehrere Spalten")
+            MsgBox("Bitte wähle eine Spalte")
         Else
             'Kopie zum modifizieren
             Dim originalDeepcopy As New List(Of String())
