@@ -37,7 +37,7 @@ Partial Class CSVTool
         btnImportCSV.Name = "btnImportCSV"
         btnImportCSV.Size = New Size(155, 35)
         btnImportCSV.TabIndex = 0
-        btnImportCSV.Text = "Import CSV"
+        btnImportCSV.Text = "CSV importieren"
         btnImportCSV.UseVisualStyleBackColor = True
         ' 
         ' lbColumns
@@ -55,7 +55,7 @@ Partial Class CSVTool
         btnReplaceData.Name = "btnReplaceData"
         btnReplaceData.Size = New Size(155, 35)
         btnReplaceData.TabIndex = 2
-        btnReplaceData.Text = "Replace Data"
+        btnReplaceData.Text = "Daten überschreiben"
         btnReplaceData.UseVisualStyleBackColor = True
         ' 
         ' btnOpenLogs
@@ -65,7 +65,7 @@ Partial Class CSVTool
         btnOpenLogs.Name = "btnOpenLogs"
         btnOpenLogs.Size = New Size(155, 35)
         btnOpenLogs.TabIndex = 3
-        btnOpenLogs.Text = "Open Logs"
+        btnOpenLogs.Text = "Logs öffnen"
         btnOpenLogs.UseVisualStyleBackColor = True
         ' 
         ' lbMessages
@@ -82,9 +82,9 @@ Partial Class CSVTool
         lblColumns.AutoSize = True
         lblColumns.Location = New Point(12, 72)
         lblColumns.Name = "lblColumns"
-        lblColumns.Size = New Size(113, 15)
+        lblColumns.Size = New Size(134, 15)
         lblColumns.TabIndex = 1
-        lblColumns.Text = "Columns (choose 1)"
+        lblColumns.Text = "Kolonnen (1 auswählen)"
         ' 
         ' lvCSV
         ' 
