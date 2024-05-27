@@ -73,7 +73,7 @@ Public Class CSVTool
             'Anzahl Kolonnen und Reihen speichern
             Dim columnCount = changesFile(0).Count(Function(x) x = ",") + 1
             Dim rowCount = changesFile.Count
-            Dim origRowCount = originalDeepcopy.Count
+            Dim origRowCount = originalDeepcopy.Count - 1
 
             'Vergleich Anzahl Reihen
             If rowCount > origRowCount Then
