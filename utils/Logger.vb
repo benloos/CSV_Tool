@@ -5,7 +5,7 @@ Public Class Logger
 
     'Logs auslesen
     Public Function readLogs()
-        Return String.Join(Environment.NewLine, File.ReadAllLines(logFile))
+        Return String.Join(Environment.NewLine, File.ReadAllLines(logFile).TakeLast(30))
     End Function
 
     'Log in die Datei schreiben
