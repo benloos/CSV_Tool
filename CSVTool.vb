@@ -53,7 +53,7 @@ Public Class CSVTool
         If lbColumns.Items.Count = 0 Then
             MsgBox("Bitte lade eine CSV Datei")
         ElseIf lbColumns.SelectedItems.Count = 0 Then
-            MsgBox("Bitte wähle eine oder mehrere Spalten")
+            MsgBox("Bitte wähle eine Spalte")
         Else
             'Kopie zum modifizieren
             Dim originalDeepcopy As New List(Of String())
@@ -73,7 +73,7 @@ Public Class CSVTool
             'Anzahl Kolonnen und Reihen speichern
             Dim columnCount = changesFile(0).Count(Function(x) x = ",") + 1
             Dim rowCount = changesFile.Count
-            Dim origRowCount = originalDeepcopy.Count
+            Dim origRowCount = originalDeepcopy.Count - 1
 
             'Vergleich Anzahl Reihen
             If rowCount > origRowCount Then
