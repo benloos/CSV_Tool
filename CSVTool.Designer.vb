@@ -47,14 +47,14 @@ Partial Class CSVTool
         lbColumns.Location = New Point(12, 90)
         lbColumns.Name = "lbColumns"
         lbColumns.Size = New Size(155, 109)
-        lbColumns.TabIndex = 2
+        lbColumns.TabIndex = 1
         ' 
         ' btnReplaceData
         ' 
         btnReplaceData.Location = New Point(12, 205)
         btnReplaceData.Name = "btnReplaceData"
         btnReplaceData.Size = New Size(155, 35)
-        btnReplaceData.TabIndex = 4
+        btnReplaceData.TabIndex = 2
         btnReplaceData.Text = "Replace Data"
         btnReplaceData.UseVisualStyleBackColor = True
         ' 
@@ -64,7 +64,7 @@ Partial Class CSVTool
         btnOpenLogs.Location = New Point(12, 264)
         btnOpenLogs.Name = "btnOpenLogs"
         btnOpenLogs.Size = New Size(155, 35)
-        btnOpenLogs.TabIndex = 5
+        btnOpenLogs.TabIndex = 3
         btnOpenLogs.Text = "Open Logs"
         btnOpenLogs.UseVisualStyleBackColor = True
         ' 
@@ -83,7 +83,7 @@ Partial Class CSVTool
         lblColumns.Location = New Point(12, 72)
         lblColumns.Name = "lblColumns"
         lblColumns.Size = New Size(113, 15)
-        lblColumns.TabIndex = 7
+        lblColumns.TabIndex = 1
         lblColumns.Text = "Columns (choose 1)"
         ' 
         ' lvCSV
@@ -92,7 +92,7 @@ Partial Class CSVTool
         lvCSV.Location = New Point(173, 12)
         lvCSV.Name = "lvCSV"
         lvCSV.Size = New Size(399, 287)
-        lvCSV.TabIndex = 8
+        lvCSV.TabIndex = 4
         lvCSV.UseCompatibleStateImageBehavior = False
         ' 
         ' CSVTool
