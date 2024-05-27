@@ -82,6 +82,7 @@ Public Class CSVTool
                 Exit Sub
             ElseIf rowCount < origRowCount Then
                 log.Log("Warning", "Nicht genügend Zeilen geladen, bitte Resultat überprüfen")
+                MsgBox("Nicht genügend Zeilen geladen, bitte Resultat überprüfen")
             End If
 
             'Bei einzelner Kolonne wird alles überschrieben
@@ -122,11 +123,11 @@ Public Class CSVTool
             End If
 
             'Neue Daten speichern und formatieren
-            Dim newFile As List(Of String) = New List(Of String)
+            Dim outputFile As List(Of String) = New List(Of String)
             For i As Integer = 0 To originalDeepcopy.Count - 1
-                newFile.Add(String.Join(",", originalDeepcopy(i)))
+                outputFile.Add(String.Join(",", originalDeepcopy(i)))
             Next
-            Dim fileName As String = fh.saveFile(newFile)
+            Dim fileName As String = fh.saveFile(outputFile)
             If fileName IsNot "" Then
                 MsgBox(fileName & " wurde erfolgreich gespeichert")
                 log.Log("Success", "Spalte " & lbColumns.SelectedItem & " wurde in der Datei " & fileName & " überschrieben")
